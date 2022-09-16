@@ -1,0 +1,26 @@
+@if(todo)
+<form class="ui form" action="{{ route('todos.update',{ id: todo.id }) }}" method="post"> 
+@else  
+<form class="ui form" action="{{ route('todos.store') }}" method="post">
+@endif
+
+
+    <div class="inline fields">
+        <div class="six wide field">
+            @if(todo)              
+            <input name="title" placeholder="New Todo" value="{{todo.title}}">  
+            @else
+            <input name="title" placeholder="New Todo" >
+            @endif
+            
+        </div>
+        <div class="one field">
+            @if(todo)
+            <input class="ui button" type="submit" value="Update">
+            @else
+            <input class="ui button" type="submit" value="Add">  
+            @endif
+            
+        </div>
+    </div>
+</form>

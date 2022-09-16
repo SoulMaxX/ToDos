@@ -1,0 +1,10 @@
+<form class="ui form" action="{{ route('todos.update',{ id: todo.id }) }}" method="post">
+    <div class="inline fields">
+        <div class="six wide field">
+            <input name="title" placeholder="New Todo" value="{{todo.title}}">
+        </div>
+        <div class="one field">
+            <input class="ui button" type="submit" value="Update">
+        </div>
+    </div>
+</form>
